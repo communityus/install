@@ -1,0 +1,20 @@
+apiVersion: config.openshift.io/v1
+kind: Infrastructure
+metadata:
+  creationTimestamp: null
+  name: cluster
+spec:
+  cloudConfig:
+    key: config
+    name: cloud-provider-config
+status:
+  apiServerInternalURI: https://api-int.ocp4.communityus.net:6443
+  apiServerURL: https://api.ocp4.communityus.net:6443
+  etcdDiscoveryDomain: ocp4.communityus.net
+  infrastructureName: ocp4-9p5nn
+  platform: Azure
+  platformStatus:
+    azure:
+      networkResourceGroupName: ocp4-9p5nn-rg
+      resourceGroupName: ocp4-9p5nn-rg
+    type: Azure

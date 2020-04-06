@@ -1,0 +1,12 @@
+apiVersion: config.openshift.io/v1
+kind: DNS
+metadata:
+  creationTimestamp: null
+  name: cluster
+spec:
+  baseDomain: ocp4.communityus.net
+  privateZone:
+    id: /subscriptions/953b0a79-347b-4c58-ac24-b7f7b08f3104/resourceGroups/ocp4-9p5nn-rg/providers/Microsoft.Network/privateDnsZones/ocp4.communityus.net
+  publicZone:
+    id: /subscriptions/953b0a79-347b-4c58-ac24-b7f7b08f3104/resourceGroups/playpassmedia104/providers/Microsoft.Network/dnszones/communityus.net
+status: {}

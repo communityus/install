@@ -1,0 +1,21 @@
+apiVersion: v1
+data:
+  config: "{\n\t\"cloud\": \"AzurePublicCloud\",\n\t\"tenantId\": \"a44e6a23-8f32-4d1c-b7f1-35603bdc4610\",\n\t\"aadClientId\":
+    \"\",\n\t\"aadClientSecret\": \"\",\n\t\"aadClientCertPath\": \"\",\n\t\"aadClientCertPassword\":
+    \"\",\n\t\"useManagedIdentityExtension\": true,\n\t\"userAssignedIdentityID\":
+    \"\",\n\t\"subscriptionId\": \"953b0a79-347b-4c58-ac24-b7f7b08f3104\",\n\t\"resourceGroup\":
+    \"ocp4-9p5nn-rg\",\n\t\"location\": \"westus2\",\n\t\"vnetName\": \"ocp4-9p5nn-vnet\",\n\t\"vnetResourceGroup\":
+    \"ocp4-9p5nn-rg\",\n\t\"subnetName\": \"ocp4-9p5nn-worker-subnet\",\n\t\"securityGroupName\":
+    \"ocp4-9p5nn-node-nsg\",\n\t\"routeTableName\": \"ocp4-9p5nn-node-routetable\",\n\t\"primaryAvailabilitySetName\":
+    \"\",\n\t\"vmType\": \"\",\n\t\"primaryScaleSetName\": \"\",\n\t\"cloudProviderBackoff\":
+    true,\n\t\"cloudProviderBackoffRetries\": 0,\n\t\"cloudProviderBackoffExponent\":
+    0,\n\t\"cloudProviderBackoffDuration\": 6,\n\t\"cloudProviderBackoffJitter\":
+    0,\n\t\"cloudProviderRateLimit\": true,\n\t\"cloudProviderRateLimitQPS\": 6,\n\t\"cloudProviderRateLimitBucket\":
+    10,\n\t\"cloudProviderRateLimitQPSWrite\": 6,\n\t\"cloudProviderRateLimitBucketWrite\":
+    10,\n\t\"useInstanceMetadata\": true,\n\t\"loadBalancerSku\": \"standard\",\n\t\"excludeMasterFromStandardLB\":
+    null,\n\t\"disableOutboundSNAT\": null,\n\t\"maximumLoadBalancerRuleCount\": 0\n}\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: cloud-provider-config
+  namespace: openshift-config
