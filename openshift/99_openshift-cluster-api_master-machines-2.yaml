@@ -1,0 +1,50 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  creationTimestamp: null
+  labels:
+    machine.openshift.io/cluster-api-cluster: ocp4-9p5nn
+    machine.openshift.io/cluster-api-machine-role: master
+    machine.openshift.io/cluster-api-machine-type: master
+  name: ocp4-9p5nn-master-2
+  namespace: openshift-machine-api
+spec:
+  metadata:
+    creationTimestamp: null
+  providerSpec:
+    value:
+      apiVersion: azureproviderconfig.openshift.io/v1beta1
+      credentialsSecret:
+        name: azure-cloud-credentials
+        namespace: openshift-machine-api
+      image:
+        offer: ""
+        publisher: ""
+        resourceID: /resourceGroups/ocp4-9p5nn-rg/providers/Microsoft.Compute/images/ocp4-9p5nn
+        sku: ""
+        version: ""
+      internalLoadBalancer: ""
+      kind: AzureMachineProviderSpec
+      location: westus2
+      managedIdentity: ocp4-9p5nn-identity
+      metadata:
+        creationTimestamp: null
+      natRule: null
+      networkResourceGroup: ocp4-9p5nn-rg
+      osDisk:
+        diskSizeGB: 1024
+        managedDisk:
+          storageAccountType: Premium_LRS
+        osType: Linux
+      publicIP: false
+      publicLoadBalancer: ""
+      resourceGroup: ocp4-9p5nn-rg
+      sshPrivateKey: ""
+      sshPublicKey: ""
+      subnet: ocp4-9p5nn-master-subnet
+      userDataSecret:
+        name: master-user-data
+      vmSize: Standard_D8s_v3
+      vnet: ocp4-9p5nn-vnet
+      zone: "2"
+status: {}

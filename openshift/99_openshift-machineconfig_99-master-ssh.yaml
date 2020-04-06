@@ -1,0 +1,27 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  creationTimestamp: null
+  labels:
+    machineconfiguration.openshift.io/role: master
+  name: 99-master-ssh
+spec:
+  config:
+    ignition:
+      config: {}
+      security:
+        tls: {}
+      timeouts: {}
+      version: 2.2.0
+    networkd: {}
+    passwd:
+      users:
+      - name: core
+        sshAuthorizedKeys:
+        - |
+          ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGBcxrGWdbSGc+QEv0kfnAeYoEd9Euwp/3q+iVTC+Hyt desktop@steamos
+    storage: {}
+    systemd: {}
+  fips: false
+  kernelArguments: null
+  osImageURL: ""
